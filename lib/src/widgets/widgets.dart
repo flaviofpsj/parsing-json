@@ -36,7 +36,7 @@ Widget circularProgressIndicator() {
   );
 }
 
-Widget basicSimpleBuilder(String url, String title) {
+Widget basicSimpleBuilder(String url, title) {
   return new GridView(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
     padding: new EdgeInsets.all(20),
@@ -46,7 +46,7 @@ Widget basicSimpleBuilder(String url, String title) {
   );
 }
 
-Widget basicListBuilder(String url, String title) {
+Widget basicListBuilder(String url, title) {
   return new Stack(
     children: <Widget>[
       new Container(
@@ -73,6 +73,36 @@ Widget basicListBuilder(String url, String title) {
             style: new TextStyle(color: Colors.white),
           ),
         ),
+      ),
+    ],
+  );
+}
+
+Widget advancedContainerBuilder(IconData icon, String text) {
+  return new Container(
+    margin: new EdgeInsets.symmetric(vertical: 5),
+    child: new Row(
+      children: <Widget>[
+        new Container(
+          margin: new EdgeInsets.only(right: 10),
+          child: new Icon(icon, color: CommonColors.marfin,),
+        ),
+        new Text(text, style: new TextStyle(color: Colors.black54, fontSize: 17)),
+      ],
+    ),
+  );
+}
+
+Widget advancedListViewBuilder(String name, email, phone, street, number, lat, lng) {
+  return new Column(
+    children: <Widget>[
+      advancedContainerBuilder(Icons.person, name),
+      advancedContainerBuilder(Icons.email, email),
+      advancedContainerBuilder(Icons.phone, phone),
+      advancedContainerBuilder(Icons.home, street + ', ' + number),
+      advancedContainerBuilder(Icons.place, lat + ', ' + lng),
+      new Divider(
+        height: 45,
       ),
     ],
   );
