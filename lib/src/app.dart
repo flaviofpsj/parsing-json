@@ -27,6 +27,14 @@ class MyApp extends StatelessWidget {
             borderRadius: new BorderRadius.circular(25),
           )
         ),
+        tabBarTheme: new TabBarTheme(
+          indicator: new UnderlineTabIndicator(
+            borderSide: new BorderSide(
+              color: Colors.white,
+              width: 3,
+            ),
+          ),
+        ),
       ),
       routes: routes,
       home: new ParsingJson(),
