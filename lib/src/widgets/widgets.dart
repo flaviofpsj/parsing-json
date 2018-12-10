@@ -3,7 +3,7 @@ import './../styles/styles.dart';
 
 Widget buttonBuilder(Function callback, IconData icon, String text) {
   return new Container(
-    padding: new EdgeInsets.only(bottom: 20),
+    padding: new EdgeInsets.only(bottom: 40),
     child: new RaisedButton(
       highlightElevation: 0,
       elevation: 0,
@@ -101,6 +101,35 @@ Widget advancedListViewBuilder(String name, email, phone, street, number, lat, l
       advancedContainerBuilder(Icons.phone, phone),
       advancedContainerBuilder(Icons.home, street + ', ' + number),
       advancedContainerBuilder(Icons.place, lat + ', ' + lng),
+      new Divider(
+        height: 45,
+      ),
+    ],
+  );
+}
+
+Widget complexListBuilder(String avatar, firstName, lastName) {
+  return new Column(
+    children: <Widget>[
+      new Container(
+        width: 128,
+        height: 128,
+        margin: new EdgeInsets.only(bottom: 10),
+        decoration: new BoxDecoration(
+          shape: BoxShape.circle,
+          border: new Border.all(color: CommonColors.beige, width: 3),
+          boxShadow: [
+            new BoxShadow(
+              color: Colors.black26,
+              blurRadius: 5,
+            ),
+          ],
+          image: new DecorationImage(
+            image: new NetworkImage(avatar),
+          )
+        ),
+      ),
+      new Text(firstName + ' ' + lastName, style: new TextStyle(fontSize: 22),),
       new Divider(
         height: 45,
       ),

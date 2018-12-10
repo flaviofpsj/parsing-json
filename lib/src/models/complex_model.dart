@@ -14,9 +14,9 @@ class UsersList {
 
     return UsersList(
       page: parsedJson['page'],
-      perPage: parsedJson['perPage'],
+      perPage: parsedJson['per_page'],
       total: parsedJson['total'],
-      totalPages: parsedJson['totalPages'],
+      totalPages: parsedJson['total_pages'],
       data: dataList,
     );
   }
@@ -33,8 +33,8 @@ class Data {
   factory Data.fromJson(Map<String, dynamic> parsedJson) {
     return Data(
       id: parsedJson['id'],
-      firstName: parsedJson['firstName'],
-      lastName: parsedJson['lastName'],
+      firstName: parsedJson['first_name'],
+      lastName: parsedJson['last_name'],
       avatar: parsedJson['avatar'],
     );
   }
