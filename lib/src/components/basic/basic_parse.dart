@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './../models/tabbar_model.dart';
-import './basic_tabs/basic_parse_simple.dart';
-import './basic_tabs/basic_parse_list.dart';
+import './../../models/tabbar_model.dart';
+import './basic_parse_simple.dart';
+import './basic_parse_list.dart';
 
 class BasicParse extends StatefulWidget {
 

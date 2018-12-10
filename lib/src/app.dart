@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import './components/parsing_json.dart';
-import './components/basic_parse.dart';
-import './components/advanced_parse.dart';
-import './components/complex_parse.dart';
+import './components/basic/basic_parse.dart';
+import './components/advanced/advanced_parse.dart';
+import './components/complex/complex_parse.dart';
 import './styles/styles.dart';
 
 final routes = <String, WidgetBuilder> {
