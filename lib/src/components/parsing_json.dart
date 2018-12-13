@@ -20,9 +20,11 @@ class _ParsingJsonState extends State<ParsingJson> {
           child: new Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              buttonBuilder(() { Navigator.of(context).pushNamed('basicParse'); }, Icons.filter_1, 'Basic Parse'),
-              buttonBuilder(() { Navigator.of(context).pushNamed('advancedParse'); }, Icons.filter_2, 'Advanced Parse'),
-              buttonBuilder(() { Navigator.of(context).pushNamed('complexParse'); }, Icons.filter_3, 'Complex Parse'),
+              buttonBuilder(() { Navigator.of(context).pushNamed('simpleMap'); }, Icons.filter_1, 'Simple Map'),
+              buttonBuilder(() { Navigator.of(context).pushNamed('listMap'); }, Icons.filter_2, 'List Map'),
+              buttonBuilder(() { Navigator.of(context).pushNamed('simpleMapWithList'); }, Icons.filter_3, 'Simple Map With List'),
+              buttonBuilder(() { Navigator.of(context).pushNamed('nestedMap'); }, Icons.filter_4, 'Nested Map'),
+              buttonBuilder(() { Navigator.of(context).pushNamed('nestedMapWithList'); }, Icons.filter_5, 'Nested Map With List'),
             ],
           ),
         ),

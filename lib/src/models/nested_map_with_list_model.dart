@@ -1,18 +1,18 @@
-class UsersList {
+class NestedMapWithListModel {
   final int page;
   final int perPage;
   final int total;
   final int totalPages;
   final List<Data> data;
 
-  UsersList({this.page, this.perPage, this.total, this.totalPages, this.data});
+  NestedMapWithListModel({this.page, this.perPage, this.total, this.totalPages, this.data});
 
-  factory UsersList.fromJson(Map<String, dynamic> parsedJson) {
+  factory NestedMapWithListModel.fromJson(Map<String, dynamic> parsedJson) {
 
     var dataJson = parsedJson['data'] as List;
     List<Data> dataList = dataJson.map((i) => Data.fromJson(i)).toList();
 
-    return UsersList(
+    return NestedMapWithListModel(
       page: parsedJson['page'],
       perPage: parsedJson['per_page'],
       total: parsedJson['total'],

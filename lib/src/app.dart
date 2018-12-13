@@ -1,15 +1,35 @@
 import 'package:flutter/material.dart';
 import './components/parsing_json.dart';
-import './components/basic/basic_parse.dart';
-import './components/advanced/advanced_parse.dart';
-import './components/complex/complex_parse.dart';
+import './components/screens/simple_map_screen.dart';
+import './components/screens/list_map_screen.dart';
+import './components/screens/simple_map_with_list_screen.dart';
+import './components/screens/nested_map_screen.dart';
+import './components/screens/nested_map_with_list_screen.dart';
 import './styles/styles.dart';
 
 final routes = <String, WidgetBuilder> {
-  BasicParse.route: (context) => BasicParse(title: 'Basic Parse'),
-  AdvancedParse.route: (context) => AdvancedParse(title: 'Advanced Parse'),
-  ComplexParse.route: (context) => ComplexParse(title: 'Complex Parse'),
+  SimpleMapScreen.route: (context) => SimpleMapScreen(title: 'Simple Map'),
+  ListMapScreen.route: (context) => ListMapScreen(title: 'List Map'),
+  SimpleMapWithListScreen.route: (context) => SimpleMapWithListScreen(title: 'Simple Map With List'),
+  NestedMapScreen.route: (context) => NestedMapScreen(title: 'Nested Map'),
+  NestedMapWithListScreen.route: (context) => NestedMapWithListScreen(title: 'Nested Map With List'),
 };
+
+const MaterialColor primarySwatch = const MaterialColor(
+  0xFF90323D,
+  const <int, Color> {
+    50: const Color(0xFF90323D),
+    100: const Color(0xFF90323D),
+    200: const Color(0xFF90323D),
+    300: const Color(0xFF90323D),
+    400: const Color(0xFF90323D),
+    500: const Color(0xFF90323D),
+    600: const Color(0xFF90323D),
+    700: const Color(0xFF90323D),
+    800: const Color(0xFF90323D),
+    900: const Color(0xFF90323D),
+  }
+);
 
 class MyApp extends StatelessWidget {
   @override
@@ -19,6 +39,7 @@ class MyApp extends StatelessWidget {
       title: 'Parsing Json',
       theme: new ThemeData(
         primaryColor: CommonColors.marfin,
+        primarySwatch: primarySwatch,
         buttonTheme: new ButtonThemeData(
           buttonColor: CommonColors.beige,
           textTheme: ButtonTextTheme.primary,

@@ -1,3 +1,19 @@
+class NestedMapModel {
+  final List<Users> users;
+
+  NestedMapModel({this.users});
+
+  factory NestedMapModel.fromJson(List<dynamic> parsedJson) {
+
+    List<Users> usersList = new List<Users>();
+    usersList = parsedJson.map((i) => Users.fromJson(i)).toList();
+
+    return NestedMapModel(
+      users: usersList,
+    );
+  }
+}
+
 class Users {
   final int id;
   final String name;

@@ -21,7 +21,7 @@ Widget buttonBuilder(Function callback, IconData icon, String text) {
   );
 }
 
-Widget circularProgressIndicator() {
+Widget circularProgressIndicatorBuilder() {
   return new Column(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
@@ -36,17 +36,17 @@ Widget circularProgressIndicator() {
   );
 }
 
-Widget basicSimpleBuilder(String url, title) {
+Widget gridViewBuilder(String url, title) {
   return new GridView(
     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
     padding: new EdgeInsets.all(20),
     children: <Widget>[
-      basicListBuilder(url, title),
+      stackBuilder(url, title),
     ],
   );
 }
 
-Widget basicListBuilder(String url, title) {
+Widget stackBuilder(String url, title) {
   return new Stack(
     children: <Widget>[
       new Container(
@@ -78,7 +78,7 @@ Widget basicListBuilder(String url, title) {
   );
 }
 
-Widget advancedContainerBuilder(IconData icon, String text) {
+Widget rowBuilder(IconData icon, String text) {
   return new Container(
     margin: new EdgeInsets.symmetric(vertical: 5),
     child: new Row(
@@ -93,14 +93,14 @@ Widget advancedContainerBuilder(IconData icon, String text) {
   );
 }
 
-Widget advancedListViewBuilder(String name, email, phone, street, number, lat, lng) {
+Widget rowListBuilder(String name, email, phone, street, number, lat, lng) {
   return new Column(
     children: <Widget>[
-      advancedContainerBuilder(Icons.person, name),
-      advancedContainerBuilder(Icons.email, email),
-      advancedContainerBuilder(Icons.phone, phone),
-      advancedContainerBuilder(Icons.home, street + ', ' + number),
-      advancedContainerBuilder(Icons.place, lat + ', ' + lng),
+      rowBuilder(Icons.person, name),
+      rowBuilder(Icons.email, email),
+      rowBuilder(Icons.phone, phone),
+      rowBuilder(Icons.home, street + ', ' + number),
+      rowBuilder(Icons.place, lat + ', ' + lng),
       new Divider(
         height: 45,
       ),
@@ -108,7 +108,7 @@ Widget advancedListViewBuilder(String name, email, phone, street, number, lat, l
   );
 }
 
-Widget complexListBuilder(String avatar, firstName, lastName) {
+Widget profileBuilder(String avatar, firstName, lastName) {
   return new Column(
     children: <Widget>[
       new Container(
