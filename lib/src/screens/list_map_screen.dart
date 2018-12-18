@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './../../models/list_map_model.dart';
-import './../../services/services.dart';
-import './../../widgets/widgets.dart';
+import './../models/list_map_model.dart';
+import './../services/services.dart';
+import './../components/widgets.dart';
 
 class ListMapScreen extends StatefulWidget {
 

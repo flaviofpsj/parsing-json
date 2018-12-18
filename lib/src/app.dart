@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import './components/parsing_json.dart';
-import './components/screens/simple_map_screen.dart';
-import './components/screens/list_map_screen.dart';
-import './components/screens/simple_map_with_list_screen.dart';
-import './components/screens/nested_map_screen.dart';
-import './components/screens/nested_map_with_list_screen.dart';
+import './screens/parsing_json.dart';
+import './screens/simple_map_screen.dart';
+import './screens/list_map_screen.dart';
+import './screens/simple_map_with_list_screen.dart';
+import './screens/nested_map_screen.dart';
+import './screens/nested_map_with_list_screen.dart';
 import './styles/styles.dart';
 
 final routes = <String, WidgetBuilder> {

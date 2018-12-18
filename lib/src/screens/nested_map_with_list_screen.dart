@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './../../models/nested_map_with_list_model.dart';
-import './../../services/services.dart';
-import './../../widgets/widgets.dart';
+import './../models/nested_map_with_list_model.dart';
+import './../services/services.dart';
+import './../components/widgets.dart';
 
 class NestedMapWithListScreen extends StatefulWidget {
 

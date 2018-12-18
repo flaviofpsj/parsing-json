@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './../widgets/widgets.dart';
+import './../components/widgets.dart';
 
 class ParsingJson extends StatefulWidget {
   @override
